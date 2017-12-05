@@ -12,16 +12,14 @@ $(document).ready( function() {
     });
   });
 
-  $('.a').on('click', function() {
+  $('#user').on('click', function() {
     $.ajax({
       url: 'http://json-server.devpointlabs.com/api/v1/users',
-      type: 'POST',
+      type: 'GET',
       dataType: 'JSON',
-    }).done( function() {
-      window.location.href = "/users/user.id/edit"
-      
-      console.log(success)
-    }).fail(function(data){
+    }).done( function(user) {
+      window.location.href = "/users/" + user.id + "/edit"
+    }).fail(function(user){
       console.log
     })
   });
