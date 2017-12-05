@@ -1,0 +1,22 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.background { 
+  background-image: url("nature.jpg") !important;
+  background-size: cover !important;
+  min-height: 100% !important;
+}
+
+.ui.container {
+  padding: 5%;
+}
+
+.user-list {
+cursor: pointer;
+
+background: rgba(0, 0,0, 0.3)
+}
+
+a {
+  color:white;
+}
