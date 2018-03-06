@@ -7,14 +7,16 @@ $(document).ready( function() {
   }).done( function(users) {
     users.forEach( function(user) {
       var list = $('.user-list')
-      var li = '<a><li data-user-id="' + user.id + '">' + user.first_name + '-' + user.last_name + ': ' + user.phone_number +'</li></a>'
+      var li = '<li class="list-item" id="' + user.id + '" data-user-id="' + user.id + '">' + user.first_name + '-' + user.last_name + ': ' + user.phone_number + '</li>'
        list.append(li)
     });
-  });
+  }); 
 
-  $('#user').on('click', function() {
+
+  $('.user-list').on('click', function(e) {
+    var number = e.target.id
     $.ajax({
-      url: 'http://json-server.devpointlabs.com/api/v1/users',
+      url: 'http://json-server.devpointlabs.com/api/v1/users/' + number,
       type: 'GET',
       dataType: 'JSON',
     }).done( function(user) {
