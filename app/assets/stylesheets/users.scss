@@ -17,6 +17,12 @@ cursor: pointer;
 background: rgba(0, 0,0, 0.3)
 }
 
-a {
-  color:white;
+
+li:hover {
+  color: white;
+  font-weight: bold;
+}
+
+li {
+  color: white;
 }

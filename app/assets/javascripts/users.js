@@ -13,6 +13,7 @@ $(document).ready( function() {
   }); 
 
 
+  //goes to edit page 
   $('.user-list').on('click', function(e) {
     var number = e.target.id
     $.ajax({
